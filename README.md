@@ -1,3 +1,5 @@
+# Operationalize a Machine Learning Microservice API
+
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/samueladekunle/udacity-cloud-devops-engineer-project-4/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/samueladekunle/udacity-cloud-devops-engineer-project-4/tree/main)
 
 ## Project Overview
@@ -21,6 +23,12 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 
 **The final implementation of the project will showcase your abilities to operationalize production microservices.**
 
+### Dependencies
+The following software dependencies are required
+- Docker
+- Hadolint
+- Kubernetes (Minikube)
+
 ---
 
 ## Setup the Environment
@@ -34,13 +42,16 @@ python3 -m pip install --user virtualenv
 python3 -m virtualenv --python=<path-to-Python3.7> .devops
 source .devops/bin/activate
 ```
+
 * Run `make install` to install the necessary dependencies
 
 ### Running `app.py`
 
 1. Standalone:  `python app.py`
 2. Run in Docker:  `./run_docker.sh`
-3. Run in Kubernetes:  `./run_kubernetes.sh`
+3. Run `minikube start`
+4. Run `kubectl config view`
+5. Run in Kubernetes:  `./run_kubernetes.sh`
 
 ### Kubernetes Steps
 
